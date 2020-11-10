@@ -49,7 +49,12 @@ def square():
     for i in range(4):
         sendmsg('forward 100')
         sendmsg('ccw 90')
-
+#Triangle
+def pentagon():
+    sendmsg('up 50')
+    for i in range(5):
+        sendmsg('forward 200')
+        sendmsg('ccw 72')
 
 
 print("\nRobert Arce")
@@ -69,8 +74,10 @@ try:
         sendmsg('takeoff')
 
         #Call the square function
-        square()
-        
+        #square()
+
+        #Call Pentagon
+        pentagon()
         sendmsg('land')
 
         print('\nGreat Flight!!!')
