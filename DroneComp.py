@@ -46,17 +46,17 @@ recvThread.start()
 def firstHoop():
     sendmsg('forward 190')
 
+
 #Drones mission for second hoop
-def secondHoop():
-    sendmsg('go 300 0 100 75')
+#def secondHoop():
+    #sendmsg('go 300 0 100 75')
 
 #Drones mission for third hoop with a yaw
-def thirdHoopYaw():
+#def thirdHoopYaw():
+
 
 #Drones mission for fourth hoop
-def fourthHoop():
-
-
+#def fourthHoop():
 
 
 
@@ -73,14 +73,17 @@ try:
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
 
-        sendmsg('command', 0)
-        sendmsg('takeoff')
+        sendmsg('command')
+        sendmsg('takeoff', 8)
 
-        #Call the square function
-        #square()
+        firstHoop()
+        
+        #secondHoop()
 
-        #Call Pentagon
-        pentagon()
+        #thirdHoopYaw()
+
+        #fourthHoop()
+
         sendmsg('land')
 
         print('\nGreat Flight!!!')
